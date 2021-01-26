@@ -5,7 +5,7 @@
 ```cfg
 start mdt_asansor
 ```
-**Yda Farklı Bir Yöntem **
+**Yda Farklı Bir Yöntem**
 ```cfg
 ensure mdt_asansor
 ```
