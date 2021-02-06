@@ -10,3 +10,5 @@ start mdt_asansor
 ensure mdt_asansor
 ```
 **Bu Gibi Başlata Bilirisiniz.**
+
+Bukadar.
