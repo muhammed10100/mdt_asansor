@@ -54,7 +54,7 @@ function KonturolBaslat()
     end)
 end
 -- asansör txtleme kısmı
-function AcıkAsansor(yazilim, mdt)
+function AcikAsansor(yazilim, mdt)
     local developend = {}
     for asansor = 1, #Config.mdtyazilim[yazilim], 1 do
         if asansor ~= mdt then
