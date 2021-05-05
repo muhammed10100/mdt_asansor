@@ -43,7 +43,7 @@ function KonturolBaslat()
                             DrawText3D(Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z, "[~r~E~w~] Asansör-"..mevcutkat, 0.40)
                             DrawMarker(27, Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z - 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.8, 0.8, 0.8, 255, 255, 255, 155, false, false, 2, false, 0, 0, 0, 0)
                             if GetDistanceBetweenCoords(Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z, kordinatmdtyazilim, true) <= 1.0 and IsControlJustReleased(0, 38) then
-                                AcıkAsansor(i, mevcutkat)
+                                AcikAsansor(i, mevcutkat)
                             end
                         end
                     end
