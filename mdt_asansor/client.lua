@@ -39,7 +39,7 @@ function KonturolBaslat()
                             end
                         end
                     else
-                        if Vdist2(Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z, kordinatmdtyazilim, true) <= 3.0 then -- GetDistanceBetweenCoords
+                        if Vdist2(Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z, kordinatmdtyazilim) <= 3.0 then -- GetDistanceBetweenCoords
                             DrawText3D(Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z, "[~r~E~w~] Asansör-"..mevcutkat, 0.40)
                             DrawMarker(27, Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z - 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.8, 0.8, 0.8, 255, 255, 255, 155, false, false, 2, false, 0, 0, 0, 0)
                             if GetDistanceBetweenCoords(Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z, kordinatmdtyazilim, true) <= 1.0 and IsControlJustReleased(0, 38) then
