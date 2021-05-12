@@ -26,11 +26,11 @@ function KonturolBaslat()
         while true do
             local kordinatmdtyazilim = GetEntityCoords(PlayerPedId())
 
-            for i = 1, #Config.mdtyazilim, 1 do
-                if GetDistanceBetweenCoords(Config.mdtyazilim[i][1].x, Config.mdtyazilim[i][1].y, Config.mdtyazilim[i][1].z, kordinatmdtyazilim, false) <= 50.0 then
+            for i = 1, #Config.mdtyazilim, 1 do  
+                if Vdist2(Config.mdtyazilim[i][1].x, Config.mdtyazilim[i][1].y, Config.mdtyazilim[i][1].z, kordinatmdtyazilim) <= 50.0 then  -- GetDistanceBetweenCoords
                     if mevcutkat == nil then
                         for f = 1, #Config.mdtyazilim[i], 1 do
-                            if GetDistanceBetweenCoords(Config.mdtyazilim[i][f].x, Config.mdtyazilim[i][f].y, Config.mdtyazilim[i][f].z, kordinatmdtyazilim, true) <= 3.0 then
+                            if Vdist2(Config.mdtyazilim[i][f].x, Config.mdtyazilim[i][f].y, Config.mdtyazilim[i][f].z, kordinatmdtyazilim) <= 3.0 then -- GetDistanceBetweenCoords
                                 DrawText3D(Config.mdtyazilim[i][f].x, Config.mdtyazilim[i][f].y, Config.mdtyazilim[i][f].z, "[~r~E~w~] Asansör-"..f, 0.40)
                                 DrawMarker(27, Config.mdtyazilim[i][f].x, Config.mdtyazilim[i][f].y, Config.mdtyazilim[i][f].z - 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.8, 0.8, 0.8, 255, 255, 255, 155, false, false, 2, false, 0, 0, 0, 0)
                                 if GetDistanceBetweenCoords(Config.mdtyazilim[i][f].x, Config.mdtyazilim[i][f].y, Config.mdtyazilim[i][f].z, kordinatmdtyazilim, true) <= 1.0 and IsControlJustReleased(0, 38) then
@@ -39,7 +39,7 @@ function KonturolBaslat()
                             end
                         end
                     else
-                        if GetDistanceBetweenCoords(Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z, kordinatmdtyazilim, true) <= 3.0 then
+                        if Vdist2(Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z, kordinatmdtyazilim, true) <= 3.0 then -- GetDistanceBetweenCoords
                             DrawText3D(Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z, "[~r~E~w~] Asansör-"..mevcutkat, 0.40)
                             DrawMarker(27, Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z - 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.8, 0.8, 0.8, 255, 255, 255, 155, false, false, 2, false, 0, 0, 0, 0)
                             if GetDistanceBetweenCoords(Config.mdtyazilim[i][mevcutkat].x, Config.mdtyazilim[i][mevcutkat].y, Config.mdtyazilim[i][mevcutkat].z, kordinatmdtyazilim, true) <= 1.0 and IsControlJustReleased(0, 38) then
