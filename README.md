@@ -1,6 +1,9 @@
-# mdt_asansor
+# Script İsmi mdt_asansor
 
 **Kurulum**
+
+**Dosyayı `resources` ın içine atıp start veriyoruz.**
+
 **Server.cfg Satır Random**
 ```cfg
 start mdt_asansor
@@ -11,4 +14,4 @@ ensure mdt_asansor
 ```
 **Bu Gibi Başlata Bilirisiniz.**
 
-Bukadar.
+> Bu kadar.
