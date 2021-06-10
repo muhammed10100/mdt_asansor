@@ -1,6 +1,7 @@
 -- MDT YAZILIM TARAFINDAN YAPILDI --
 -- MDT YAZILIM TARAFINDAN YAPILDI --
 -- MDT YAZILIM TARAFINDAN YAPILDI --
+-- Başlangıc
 ESX = nil
 PlayerData = nil
 TriggerEvent("esx:getSharedObject", function(obj) ESX = obj end)
@@ -53,7 +54,7 @@ function KonturolBaslat()
         end
     end)
 end
--- asansör txtleme kısmı
+-- asansör txtleme kısmı -- menu
 function AcikAsansor(yazilim, mdt)
     local developend = {}
     for asansor = 1, #Config.mdtyazilim[yazilim], 1 do
@@ -75,7 +76,7 @@ function AcikAsansor(yazilim, mdt)
         menu.close()
     end)
 end
-
+-- animasyon ekran kararma kısmı
 function Teleport(yazilim, mdt)
     mevcutkat = mdt
     DoScreenFadeOut(500)
@@ -85,8 +86,9 @@ function Teleport(yazilim, mdt)
     Citizen.Wait(200)
     DoScreenFadeIn(500)
 end
-
-function DisableControl() DisableControlAction(0, 73, false) 
+-- tuş konturolü
+function DisableControl() 
+	DisableControlAction(0, 73, false) 
 	DisableControlAction(0, 24, true) 
 	DisableControlAction(0, 257, true) 
 	DisableControlAction(0, 25, true) 
