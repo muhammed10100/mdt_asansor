@@ -1,4 +1,4 @@
-# Script İsmi mdt_asansor
+# Script İsmi: mdt_asansor
 
 **Kurulum**
 
